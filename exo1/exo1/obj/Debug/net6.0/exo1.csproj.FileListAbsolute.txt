@@ -1,0 +1,14 @@
+C:\DNE\adventofcode2023\exo1\exo1\bin\Debug\net6.0\exo1.exe
+C:\DNE\adventofcode2023\exo1\exo1\bin\Debug\net6.0\exo1.deps.json
+C:\DNE\adventofcode2023\exo1\exo1\bin\Debug\net6.0\exo1.runtimeconfig.json
+C:\DNE\adventofcode2023\exo1\exo1\bin\Debug\net6.0\exo1.dll
+C:\DNE\adventofcode2023\exo1\exo1\bin\Debug\net6.0\exo1.pdb
+C:\DNE\adventofcode2023\exo1\exo1\obj\Debug\net6.0\exo1.GeneratedMSBuildEditorConfig.editorconfig
+C:\DNE\adventofcode2023\exo1\exo1\obj\Debug\net6.0\exo1.AssemblyInfoInputs.cache
+C:\DNE\adventofcode2023\exo1\exo1\obj\Debug\net6.0\exo1.AssemblyInfo.cs
+C:\DNE\adventofcode2023\exo1\exo1\obj\Debug\net6.0\exo1.csproj.CoreCompileInputs.cache
+C:\DNE\adventofcode2023\exo1\exo1\obj\Debug\net6.0\exo1.dll
+C:\DNE\adventofcode2023\exo1\exo1\obj\Debug\net6.0\refint\exo1.dll
+C:\DNE\adventofcode2023\exo1\exo1\obj\Debug\net6.0\exo1.pdb
+C:\DNE\adventofcode2023\exo1\exo1\obj\Debug\net6.0\exo1.genruntimeconfig.cache
+C:\DNE\adventofcode2023\exo1\exo1\obj\Debug\net6.0\ref\exo1.dll
