@@ -55,7 +55,7 @@ internal class Program
                             for (int incr = 0; incr < seeds.Count; incr++)
                             {
                                 //si la valeur de la seed est superieur a la seconde colonne et inferieure à la valeur de la seconde colonne + le range de la 3e
-                                if (seeds[incr] > map[1] && seeds[incr] < (map[1] + map[2]) && visited[incr]==false)
+                                if (seeds[incr] > map[1] && seeds[incr] < (map[1] + map[2]) && !visited[incr])
                                 {
                                     //on regarde combien de dif il y a entre le premier element et la seed
                                     double diff =  seeds[incr] - map[1];
