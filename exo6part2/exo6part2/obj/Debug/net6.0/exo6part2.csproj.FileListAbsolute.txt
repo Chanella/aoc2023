@@ -1,0 +1,14 @@
+D:\adventofcode2023\exo6part2\exo6part2\bin\Debug\net6.0\exo6part2.exe
+D:\adventofcode2023\exo6part2\exo6part2\bin\Debug\net6.0\exo6part2.deps.json
+D:\adventofcode2023\exo6part2\exo6part2\bin\Debug\net6.0\exo6part2.runtimeconfig.json
+D:\adventofcode2023\exo6part2\exo6part2\bin\Debug\net6.0\exo6part2.dll
+D:\adventofcode2023\exo6part2\exo6part2\bin\Debug\net6.0\exo6part2.pdb
+D:\adventofcode2023\exo6part2\exo6part2\obj\Debug\net6.0\exo6part2.GeneratedMSBuildEditorConfig.editorconfig
+D:\adventofcode2023\exo6part2\exo6part2\obj\Debug\net6.0\exo6part2.AssemblyInfoInputs.cache
+D:\adventofcode2023\exo6part2\exo6part2\obj\Debug\net6.0\exo6part2.AssemblyInfo.cs
+D:\adventofcode2023\exo6part2\exo6part2\obj\Debug\net6.0\exo6part2.csproj.CoreCompileInputs.cache
+D:\adventofcode2023\exo6part2\exo6part2\obj\Debug\net6.0\exo6part2.dll
+D:\adventofcode2023\exo6part2\exo6part2\obj\Debug\net6.0\refint\exo6part2.dll
+D:\adventofcode2023\exo6part2\exo6part2\obj\Debug\net6.0\exo6part2.pdb
+D:\adventofcode2023\exo6part2\exo6part2\obj\Debug\net6.0\exo6part2.genruntimeconfig.cache
+D:\adventofcode2023\exo6part2\exo6part2\obj\Debug\net6.0\ref\exo6part2.dll
