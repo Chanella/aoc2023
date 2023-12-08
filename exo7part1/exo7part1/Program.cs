@@ -54,7 +54,6 @@ public class hand
     {
         List<string> list = new List<string>();
         list = this.cards.Select(x=>x.ToString()).ToList();
-        this.type = 0;
 
         list.RemoveAll(x => x == cards[0].ToString());
         // 5 pareils
@@ -85,6 +84,7 @@ public class hand
             this.type = 1;
             string s = list[0];
             list.RemoveAll(x => x == s);
+            if (list.Count == 0) this.type += 3;
             if (list.Count == 1)
             {
                 this.type ++;
@@ -99,24 +99,49 @@ public class hand
          {
             string s = list[0];
             list.RemoveAll(x => x == s);
-
+            
+            // 4 pareils
             if (list.Count == 0) {
-                this.type = 6;
+                this.type = 5;
             }
+
+            // 3 pareils - 2 diffs
             if (list.Count == 1) { this.type = 3; }
+
+            //2 pareils
             if (list.Count == 2) 
             {
                 this.type = 1;
+                // 2 pareils - 2 pareils
                 if (list[0] == list[1]) this.type++;
             }
+            //
             if (list.Count == 3) 
             {
                 s = list[0];
                 list.RemoveAll(x => x == s);
-                if (list.Count == 0) this.type = 3;
+                // 3 pareils - 2 diffs
+                if (list.Count == 0)
+                {
+                    this.type = 3;
+                    return this.type;
+                }
 
-                if (list.Count == 1) this.type = 1; 
-                if (list.Count == 2) if (list[0] == list[1]) this.type = 1;
+                // 2 pareils only
+                if (list.Count == 1)
+                {
+                    this.type = 1;
+                    return this.type;
+                }
+
+                //nada
+                if (list.Count == 2)
+                { 
+                    // 2 pareils only
+                    if (list[0] == list[1]) 
+                        this.type = 1; 
+                }
+                else this.type = 0;
             }
          }
         return this.type;
@@ -165,7 +190,7 @@ internal class Program
                      * 2 cartes pareilles solo => 1
                      * nada => 0
                      * */
-                    
+
                     cards.Add(h);
                     line = sr.ReadLine();
                 }
