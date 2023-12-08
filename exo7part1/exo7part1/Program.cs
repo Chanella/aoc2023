@@ -1,4 +1,4 @@
-﻿using System.Collections.Generic;
+using System.Collections.Generic;
 using System;
 using System.Numerics;
 using System.Reflection.Metadata;
@@ -23,7 +23,7 @@ public class hand
     public List<int> Convert(List<char> c)
     {
         List<int> result = new List<int>();
-        foreach(char ch in c) 
+        foreach (char ch in c)
         {
             switch (ch)
             {
@@ -42,10 +42,10 @@ public class hand
                 case 'T':
                     result.Add(10);
                     break;
-                default: 
-                    result.Add(Int32.Parse(ch.ToString())); 
+                default:
+                    result.Add(Int32.Parse(ch.ToString()));
                     break;
-             }
+            }
         }
         return result;
     }
@@ -53,55 +53,54 @@ public class hand
     public int assigntype()
     {
         List<string> list = new List<string>();
-        list = this.cards.Select(x=>x.ToString()).ToList();
+        list = this.cards.Select(x => x.ToString()).ToList();
 
         list.RemoveAll(x => x == cards[0].ToString());
         // 5 pareils
-        if (list.Count == 0 )
+        if (list.Count == 0)
         {
-           this.type = 6;
-           return this.type;
+            return 6;
         }
         // 4 pareils
         if (list.Count == 1)
         {
-            this.type = 5;
+            return 5;
+        }
+
+        // il y a 3 pareils
+        if (list.Count == 2)
+        {
+            this.type = 3;
+            if (list[0] == list[1]) this.type++;
+
             return this.type;
         }
 
-         // il y a 3 pareils
-         if (list.Count == 2)
-         {
-            this.type = 3;
-            if (list[0] == list[1]) this.type ++;
-
-            return this.type;
-         }
-   
-         // il y a deux pareils
-         if (list.Count == 3)
-         {
+        // il y a deux pareils
+        if (list.Count == 3)
+        {
             this.type = 1;
             string s = list[0];
             list.RemoveAll(x => x == s);
             if (list.Count == 0) this.type += 3;
             if (list.Count == 1)
             {
-                this.type ++;
+                this.type++;
             }
-            if(list.Count == 2) 
-            { 
-                if (list[0] == list[1]) this.type++; 
+            if (list.Count == 2)
+            {
+                if (list[0] == list[1]) this.type++;
             }
             return this.type;
-         }   
-         if (list.Count == 4) 
-         {
+        }
+        if (list.Count == 4)
+        {
             string s = list[0];
             list.RemoveAll(x => x == s);
-            
+
             // 4 pareils
-            if (list.Count == 0) {
+            if (list.Count == 0)
+            {
                 this.type = 5;
             }
 
@@ -109,41 +108,39 @@ public class hand
             if (list.Count == 1) { this.type = 3; }
 
             //2 pareils
-            if (list.Count == 2) 
+            if (list.Count == 2)
             {
                 this.type = 1;
                 // 2 pareils - 2 pareils
                 if (list[0] == list[1]) this.type++;
             }
             //
-            if (list.Count == 3) 
+            if (list.Count == 3)
             {
                 s = list[0];
                 list.RemoveAll(x => x == s);
                 // 3 pareils - 2 diffs
                 if (list.Count == 0)
                 {
-                    this.type = 3;
-                    return this.type;
+                    return 3;
                 }
 
                 // 2 pareils only
                 if (list.Count == 1)
                 {
-                    this.type = 1;
-                    return this.type;
+                    return 1;
                 }
 
                 //nada
                 if (list.Count == 2)
-                { 
+                {
                     // 2 pareils only
-                    if (list[0] == list[1]) 
-                        this.type = 1; 
+                    if (list[0] == list[1])
+                        this.type = 1;
                 }
                 else this.type = 0;
             }
-         }
+        }
         return this.type;
     }
 
@@ -155,7 +152,7 @@ public class hand
     }
     public int getcard(int c)
     { return cards[c]; }
-    
+
 }
 
 
@@ -179,7 +176,7 @@ internal class Program
                 //Continue to read until you reach end of file
                 while (line != null)
                 {
-                    hand h = new hand(line.Split(" ")[0].ToCharArray().ToList(),Int32.Parse(line.Split(" ")[1]));
+                    hand h = new hand(line.Split(" ")[0].ToCharArray().ToList(), Int32.Parse(line.Split(" ")[1]));
                     //on cherche a savoir ou ajouter la main dans la liste des mains
                     /*
                      * 5 Cartes pareilles => type 6
@@ -196,8 +193,8 @@ internal class Program
                 }
 
                 IEnumerable<hand> query = from hands in cards
-                                            orderby hands.getType, hands.cards[0], hands.cards[1], hands.cards[2], hands.cards[3], hands.cards[4]
-                                            select hands;
+                                          orderby hands.getType, hands.cards[0], hands.cards[1], hands.cards[2], hands.cards[3], hands.cards[4]
+                                          select hands;
                 int i = 1;
                 foreach (hand h in query)
                 {
@@ -205,7 +202,7 @@ internal class Program
                     i++;
                 }
 
-                Console.WriteLine("le plus petit est " + way);
+                Console.WriteLine("le total winnings est " + way);
                 //close the file
                 sr.Close();
                 Console.ReadLine();
