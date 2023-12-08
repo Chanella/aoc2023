@@ -141,9 +141,6 @@ public class hand
                 
             }
         }
-
-
-
         return type;
     }
 
@@ -300,7 +297,7 @@ internal class Program
                     i++;
                 }
 
-                Console.WriteLine("le plus petit est " + way);
+                Console.WriteLine("le total winnings est " + way);
                 //close the file
                 sr.Close();
                 Console.ReadLine();
