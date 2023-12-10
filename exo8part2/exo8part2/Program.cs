@@ -73,14 +73,14 @@ internal class Program
                         {
                             for (int m = 0; m < current.Count; m++)
                             {
-                                current[0] = maps.Find(x => x.id == current[0].dirR);
+                                current[m] = maps.Find(x => x.id == current[m].dirR);
                             }
                         }
                         else
                         {
                             for (int m = 0; m < current.Count; m++)
                             {
-                                current[0] = maps.Find(x => x.id == current[0].dirL);
+                                current[m] = maps.Find(x => x.id == current[m].dirL);
                             }
                         }
                         i++;
